@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memmy · 让所有 AI，都记得同一个你</title>
+  <meta name="description" content="Memmy 是一个本地优先的个人 AI 记忆层。它整理你的偏好、决策和项目背景，让不同 AI 工具接上同一个你。" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=qoderwork-clean-v1" />
+</head>
+<body>
+  <header class="site-nav">
+    <a href="#top" class="brand">
+      <img src="assets/mascot/memmy-rice.png" alt="Memmy" />
+      <span>Memmy</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#how">如何工作</a>
+      <a href="#cases">场景</a>
+      <a href="#privacy">安全</a>
+      <a href="docs/">文档</a>
+    </nav>
+    <a href="#download" class="nav-button">下载</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-art" aria-hidden="true">
+        <svg class="doodle-line" viewBox="0 0 520 210" fill="none">
+          <path d="M78 140C122 42 271 24 304 82C336 141 237 159 250 82C264 -2 417 10 456 118" pathLength="1" />
+        </svg>
+
+        <div class="sticker sticker-folder">
+          <span></span>
+        </div>
+        <div class="sticker sticker-globe">
+          <span></span>
+        </div>
+        <div class="sticker sticker-doc">
+          <span></span>
+        </div>
+        <div class="sticker sticker-card">
+          <img src="assets/mascot/memmy-read.png" alt="" />
+        </div>
+      </div>
+
+      <div class="hero-copy reveal">
+        <h1>
+          <span>通过记忆，</span>
+          <span>完成偏好理解、</span>
+          <span>项目接力</span>
+          <img src="assets/mascot/memmy-rice.png" alt="" class="inline-memmy" />
+          <span>与上下文生成。</span>
+        </h1>
+        <p>为每天和多个 AI 工具协作的人而生。你说过的、决定过的、在乎的，Memmy 会帮你整理好。</p>
+        <div class="hero-actions">
+          <a href="#download" class="button button-primary">下载桌面版</a>
+          <a href="#how" class="button button-secondary">看它怎么工作</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="plain-intro">
+      <div class="intro-card reveal">
+        <span class="eyebrow">WHAT MEMMY DOES</span>
+        <h2>不是再开一个聊天窗口，而是给所有窗口同一份记忆。</h2>
+        <p>Memmy 读取你授权的本机 AI 协作历史，把零散对话提炼成结构化记忆，再按当前任务把合适的上下文递给新的 AI 对话。</p>
+      </div>
+    </section>
+
+    <section class="process-section" id="how">
+      <div class="section-heading reveal">
+        <span class="eyebrow">HOW IT WORKS</span>
+        <h2>三件事，解决 AI 工具之间的断片。</h2>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card reveal">
+          <div class="process-icon">
+            <img src="assets/mascot/memmy-read.png" alt="" />
+          </div>
+          <span>01</span>
+          <h3>整理历史</h3>
+          <p>从 Cursor、Claude、Codex 等本机记录中，找到项目背景、反复出现的偏好和关键决策。</p>
+        </article>
+        <article class="process-card reveal">
+          <div class="process-icon">
+            <img src="assets/mascot/memmy-think.png" alt="" />
+          </div>
+          <span>02</span>
+          <h3>形成记忆</h3>
+          <p>把散乱聊天提炼成可搜索、可编辑、可删除的记忆条目，而不是保存一堆原始噪音。</p>
+        </article>
+        <article class="process-card reveal">
+          <div class="process-icon">
+            <img src="assets/mascot/memmy-connect.png" alt="" />
+          </div>
+          <span>03</span>
+          <h3>按需递交</h3>
+          <p>新对话开始时，只注入当前任务相关的上下文，让 AI 更快进入状态，也更少暴露无关信息。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cases-section" id="cases">
+      <div class="section-heading reveal">
+        <span class="eyebrow">USE CASES</span>
+        <h2>日常工作里，少重复解释很多次。</h2>
+      </div>
+
+      <div class="case-list">
+        <article class="case-row reveal">
+          <span>切换工具</span>
+          <h3>Cursor 额度用完，换 Claude 也不丢背景。</h3>
+          <p>Memmy 把项目约束、技术选择和下一步任务带过去。</p>
+        </article>
+        <article class="case-row reveal">
+          <span>保持偏好</span>
+          <h3>文案口味、代码风格、设计偏好不用反复说。</h3>
+          <p>长期偏好会被归档，临时任务上下文会按项目区分。</p>
+        </article>
+        <article class="case-row reveal">
+          <span>生成文档</span>
+          <h3>把多轮 AI 对话整理成决策记录和交接说明。</h3>
+          <p>适合复盘方案、整理周报、给团队留下上下文。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="privacy-section" id="privacy">
+      <div class="privacy-copy reveal">
+        <span class="eyebrow">CONTROL</span>
+        <h2>你的记忆，只属于你。</h2>
+        <p>Memmy 默认本地优先。哪些来源能被读取、哪些记忆能被使用、什么时候删除，都由你决定。</p>
+      </div>
+      <div class="privacy-panel reveal">
+        <img src="assets/mascot/memmy-shield.png" alt="" />
+        <ul>
+          <li>按来源授权采集</li>
+          <li>逐条查看和删除记忆</li>
+          <li>只注入当前任务相关内容</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="download-section" id="download">
+      <img src="assets/mascot/memmy-celebrate.png" alt="" class="download-mascot reveal" />
+      <div class="download-copy reveal">
+        <span class="eyebrow">GET STARTED</span>
+        <h2>让所有 AI，<br />都记得同一个你。</h2>
+        <p>macOS · Windows · 免费 · 开源</p>
+        <div class="hero-actions">
+          <a href="#" class="button button-primary" id="downloadBtn">下载 Mac 版</a>
+          <a href="#" class="button button-secondary" id="downloadWinBtn">下载 Windows 版</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#top" class="brand">
+      <img src="assets/mascot/memmy-rice.png" alt="" />
+      <span>Memmy</span>
+    </a>
+    <nav>
+      <a href="https://github.com/memmy" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="docs/">Docs</a>
+      <a href="mailto:hi@memmy.ai">Contact</a>
+    </nav>
+  </footer>
+
+  <script src="script.js?v=qoderwork-clean-v1"></script>
+</body>
+</html>
