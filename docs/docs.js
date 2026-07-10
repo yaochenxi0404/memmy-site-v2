@@ -10,6 +10,23 @@ const burger = document.getElementById('docsBurger');
 const overlay = document.getElementById('docsOverlay');
 const navLinks = document.querySelectorAll('.docs-nav__link');
 
+function renderFallbackMarkdown(md) {
+  return md
+    .split(/\n{2,}/)
+    .map(block => {
+      const text = block.trim();
+      if (!text) return '';
+      if (text.startsWith('### ')) return '<h3>' + text.slice(4) + '</h3>';
+      if (text.startsWith('## ')) return '<h2>' + text.slice(3) + '</h2>';
+      if (text.startsWith('# ')) return '<h1>' + text.slice(2) + '</h1>';
+      if (text.startsWith('- ')) {
+        return '<ul>' + text.split('\n').map(item => '<li>' + item.replace(/^- /, '') + '</li>').join('') + '</ul>';
+      }
+      return '<p>' + text.replace(/\n/g, '<br />') + '</p>';
+    })
+    .join('');
+}
+
 function getPageFromHash() {
   const hash = location.hash.replace('#', '');
   return PAGES.includes(hash) ? hash : 'introduction';
@@ -21,7 +38,7 @@ async function loadPage(page) {
     const res = await fetch('content/' + page + '.md');
     if (!res.ok) throw new Error(res.status);
     const md = await res.text();
-    article.innerHTML = marked.parse(md);
+    article.innerHTML = window.marked ? marked.parse(md) : renderFallbackMarkdown(md);
     buildToc();
     updateActiveNav(page);
     window.scrollTo(0, 0);

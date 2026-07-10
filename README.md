@@ -1,6 +1,6 @@
 # Memmy Website - Version 2
 
-Static build of the second Memmy website direction.
+Static build of the Memmy website with the spring logo animation on the hero screen.
 
 ## Deploy
 
